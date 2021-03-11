@@ -9,7 +9,12 @@ describe("<App />", () => {
 
   function type(str: string) {
     const characters = str.split("");
-    characters.forEach((s) => cy.get("button").contains(s).click());
+    characters.forEach((s) =>
+      cy
+        .get("button")
+        .filter((_, el) => el.innerText === s)
+        .click()
+    );
   }
 
   it("Sets a number when typing 10", () => {
