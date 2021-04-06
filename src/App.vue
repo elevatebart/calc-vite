@@ -1,6 +1,4 @@
 <template>
-  <button @click="toggle()">Toggle: {{ toggleValue }}</button>
-  {{ isMyRef }}
   <CalcContainer class="container">
     <CalcDisplay> {{ negative ? "-" : "" }}{{ result }} </CalcDisplay>
     <div class="keyboard">
@@ -31,8 +29,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, isRef, ref } from "vue";
-import { useToggle } from "@vueuse/core";
+import { defineComponent, ref } from "vue";
 
 import CalcContainer from "./components/Container.vue";
 import CalcDisplay from "./components/Display.vue";
@@ -48,18 +45,10 @@ export default defineComponent({
   setup() {
     const result = ref("0");
     const negative = ref(false);
-    const isMyRef = ref(false);
-    const [toggleValue, toggle] = useToggle(true);
     const numbers = [9, 8, 7, 6, 5, 4, 3, 2, 1];
     let currentNumber = "";
     let operator = "";
     let firstOperand = 0;
-
-    const nodePath = "./asyncErrorMaker.ts";
-
-    import(/* @vite-ignore */ nodePath).then(({ mount }) => {
-      console.log(mount);
-    });
 
     function evalCurrentNumber(): number {
       const sign = negative.value ? -1 : 1;
@@ -143,14 +132,11 @@ export default defineComponent({
       firstOperand = 0;
       negative.value = false;
       result.value = firstOperand.toString();
-      debugger;
-      isMyRef.value = isRef(result);
       handleEqual();
     }
 
     return {
       result,
-      isMyRef,
       numbers,
       handleNumber,
       handleEqual,
@@ -159,8 +145,6 @@ export default defineComponent({
       reset,
       negative,
       handlePercent,
-      toggleValue,
-      toggle,
     };
   },
 });
