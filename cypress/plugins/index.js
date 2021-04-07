@@ -24,7 +24,6 @@ module.exports = (on, config) => {
   on("dev-server:start", async (options) =>
     startDevServer({
       options,
-      viteConfig: {},
     })
   );
 };
