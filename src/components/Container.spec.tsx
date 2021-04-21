@@ -12,8 +12,6 @@ describe("<CalcContainer />", () => {
           Assumenda animi non quia.
         </div>
       </CalcContainer>
-    )).then(() => {
-      cy.get("div.wrapper").snapshot();
-    });
+    ));
   });
 });
