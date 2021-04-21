@@ -11,7 +11,6 @@
     "vue": "^3.0.4"
   },
   "devDependencies": {
-    "@cypress/snapshot": "^2.1.7",
     "@cypress/vite-dev-server": "^1.2.2",
     "@cypress/vue": "^3.0.1",
     "@testing-library/cypress": "7.0.6",
