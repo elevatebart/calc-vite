@@ -1,1 +1,1 @@
-window.process = { env: {}, args: [] };
+window.process = { env: {}, argv: [] };
