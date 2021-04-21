@@ -6,12 +6,14 @@ describe("<CalcContainer />", () => {
     mount(() => (
       <CalcContainer>
         <div style="margin: 10px">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur cum
-          laborum labore id possimus? Voluptates delectus iure enim nobis maxime
-          illo blanditiis, repellat sunt voluptatibus dignissimos! Assumenda animi
-          non quia.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
+          cum laborum labore id possimus? Voluptates delectus iure enim nobis
+          maxime illo blanditiis, repellat sunt voluptatibus dignissimos!
+          Assumenda animi non quia.
         </div>
       </CalcContainer>
-    ));
+    )).then(() => {
+      cy.get("div.wrapper").snapshot();
+    });
   });
 });
