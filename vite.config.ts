@@ -7,7 +7,7 @@ export default defineConfig({
   // avoid infinite loop on cypress
   server: {
     watch: {
-      ignored: "cypress/screenshots/**/*.png",
+      ignored: ["**/cypress/screenshots/**"],
     },
   },
 });
