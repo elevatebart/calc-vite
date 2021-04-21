@@ -2,5 +2,6 @@
   "$schema": "https://on.cypress.io/cypress.schema.json",
   "fixturesFolder": false,
   "componentFolder": "src",
-  "testFiles": "**/*.spec.{js,ts,jsx,tsx}"
+  "testFiles": "**/*.spec.{js,ts,jsx,tsx}",
+  "projectId": "z9dftg"
 }
