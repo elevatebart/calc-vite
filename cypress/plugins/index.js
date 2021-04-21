@@ -26,4 +26,6 @@ module.exports = (on, config) => {
       options,
     })
   );
+
+  return config;
 };
