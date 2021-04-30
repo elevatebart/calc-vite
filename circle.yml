@@ -7,11 +7,13 @@ jobs:
     steps:
       - checkout
       - run: yarn install
-      - run: yarn cy:run
+      - run: yarn cy:run --reporter cypress-circleci-reporter
       - store_artifacts:
           path: cypress/screenshots
       - store_artifacts:
           path: cypress/videos
+      - store_test_results:
+          path: test_results/cypress
 
 workflows:
   test-wf:
