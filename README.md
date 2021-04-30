@@ -1,5 +1,7 @@
 # calc-vite
 
+[![CircleCI](https://circleci.com/gh/elevatebart/calc-vite.svg?style=svg)](https://circleci.com/gh/elevatebart/calc-vite)
+
 This projects intends to show how to develop components using vite vue3 and ...
 
 ## Cypress component testing
