@@ -3,5 +3,11 @@ node_modules
 dist
 dist-ssr
 *.local
+
+# Cypress specific folders
 cypress/screenshots
 cypress/videos
+
+# Coverage
+coverage
+.nyc_output
