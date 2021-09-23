@@ -1,5 +1,4 @@
 import { mount } from "@cypress/vue";
-import { multiply } from "cypress/types/lodash";
 import App from "./App.vue";
 
 describe("<App />", () => {
