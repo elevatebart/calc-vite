@@ -6,6 +6,7 @@ export default {
   componentFolder: "src",
   testFiles: "**/*.spec.{tsx,js}",
   component: {
+    testFiles: "**/*.spec.{tsx,js}",
     async devServer(options) {
       return startDevServer({ options })
     },
