@@ -3,7 +3,7 @@ version: 2.1
 jobs:
   test-job:
     docker:
-      - image: cypress/included:9.5.3
+      - image: cypress/included:12.17.1
     steps:
       - checkout
       - run: yarn install

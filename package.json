@@ -4,8 +4,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "cy:open": "cypress open-ct",
-    "cy:run": "cypress run-ct"
+    "cy:open": "cypress open --component",
+    "cy:run": "cypress run --component"
   },
   "dependencies": {
     "vue": "^3.3.4"
