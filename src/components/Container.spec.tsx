@@ -1,4 +1,4 @@
-import { mount } from "@cypress/vue";
+import { mount } from "cypress/vue";
 import CalcContainer from "./Container.vue";
 
 describe("<CalcContainer />", () => {

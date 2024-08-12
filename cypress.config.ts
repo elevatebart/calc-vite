@@ -4,18 +4,24 @@ export default defineConfig({
   fixturesFolder: false,
 
   e2e: {
-    // We've imported your old cypress plugins here.
-    // You may want to clean this up later by importing these.
     setupNodeEvents(on, config) {
-      return require("./cypress/plugins/index.ts").default(on, config);
+      require("@cypress/code-coverage/task")(on, config);
+
+      return config;
     },
     specPattern: "cypress/e2e/**/*.spec.{tsx,js}",
   },
 
   component: {
+    specPattern: "src/components/**/*.spec.{tsx,js}",
     devServer: {
       framework: "vue",
       bundler: "vite",
+    },
+    setupNodeEvents(on, config) {
+      require("@cypress/code-coverage/task")(on, config);
+
+      return config;
     },
   },
 });

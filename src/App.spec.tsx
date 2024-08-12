@@ -1,4 +1,4 @@
-import { mount } from "@cypress/vue";
+import { mount } from "cypress/vue";
 import App from "./App.vue";
 
 describe("<App />", () => {
@@ -102,7 +102,7 @@ describe("<App />", () => {
     it("should display decimals starting with a .", () => {
       type(".25");
       cy.get("@display").should("contain", "0.25");
-    })
+    });
     it("should display decimals", () => {
       type("135.25");
       cy.get("@display").should("contain", "135.25");
@@ -131,12 +131,12 @@ describe("<App />", () => {
   });
   describe("multiply/divide", () => {
     it("should multiply two integer", () => {
-      type("3x5=")
+      type("3x5=");
       cy.get("@display").should("contain", "15");
-    })
+    });
     it("should divide 2 integer", () => {
-      type("10÷5=")
+      type("10÷5=");
       cy.get("@display").should("contain", "2");
-    })
-  })
+    });
+  });
 });
