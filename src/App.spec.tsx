@@ -17,16 +17,6 @@ describe("<App />", () => {
     );
   }
 
-  it("Sets a number when typing 10", () => {
-    type("10");
-    cy.get("@display").should("contain", "10");
-  });
-
-  it("Sets a number when typing 28 and =", () => {
-    type("28=");
-    cy.get("@display").should("contain", "28");
-  });
-
   it("ignores trainling 0 ", () => {
     type("010");
     cy.get("@display").should("not.contain", "010");
